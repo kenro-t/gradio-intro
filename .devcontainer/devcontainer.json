@@ -1,0 +1,27 @@
+{
+    "name": "Gradio Dev",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "forwardPorts": [
+        7860
+    ],
+    "features": {
+        "docker-from-docker": {
+            "version": "latest"
+        }
+    },
+    "mounts": [
+        "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "google.geminicodeassist",
+                "oderwat.indent-rainbow",
+                "KevinRose.vsc-python-indent"
+            ]
+        }
+    }
+}
